@@ -197,6 +197,9 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
      * @param index position of action to remove
      */
     public void removeActionAt(int index) {
+        if (index < 0) {
+            return;
+        }
         mActionsView.removeViewAt(index);
     }
 
